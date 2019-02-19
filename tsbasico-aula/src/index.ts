@@ -1,6 +1,6 @@
-import { OlaMundo } from './olaMundo';
+// import { OlaMundo } from './olaMundo';
 import { Delivery } from './delivery';
+import { Requisicoes } from './requisicoes';
 
 // new OlaMundo().run();
-new OlaMundo().getSabores();
-// new Delivery().fazerPedido();
+new Delivery().getSabores();

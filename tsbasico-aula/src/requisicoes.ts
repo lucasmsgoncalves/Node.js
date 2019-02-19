@@ -1,11 +1,11 @@
-import {prompt} from 'inquirer';
+// import {prompt} from 'inquirer';
 import {VpHttp} from './http/vphttp';
 
-export class OlaMundo {
+export class Requisicoes {
 
     public getSabores(){
         // console.log('Passou aqui');
-        new VpHttp('http://5c64a0b9c969210014a32ed5.mockapi.io/sabores').get().subscribe(
+        new VpHttp('http://5c6b29dfe85ff400140854fe.mockapi.io/bairros').get().subscribe(
             (data : any) => {
                 console.log(data);
             },
@@ -14,4 +14,4 @@ export class OlaMundo {
             }
         );
     }
-}
+} 
