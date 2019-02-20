@@ -194,10 +194,7 @@ export class Delivery {
                     this.imprimirExtrato();
                 }
             );
-        
-
     }
-
 
     private imprimirExtrato() {
         console.log("INFORMAÇÕES DO PEDIDO\n");

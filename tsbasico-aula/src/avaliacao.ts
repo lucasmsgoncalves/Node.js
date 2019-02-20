@@ -76,7 +76,7 @@ export class Avaliacao {
         )
     }
 
-    public imprimirRelatorioEstoque(Produto : any, quantidade : any){
-        console.log("Passou aqui");
+    public imprimirRelatorioEstoque(produto : any, quantidade : any){
+        console.log("PRODUTO:" + produto + " | QUANTIDADE: "+quantidade);
     }
 }
