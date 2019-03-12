@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>APP</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button secondary (click)="buttonClick()">Mostrar</button>
+  <button ion-button primary (click)="adicionarAlunos()">Carregar Alunos</button>
+  <button ion-button light (click)="limparLista()">Limpar lista</button>
+  <button ion-button light (click)="showMessage()">Mostrar mensagem</button>
+  <button ion-button light (click)="showToast()">Mostrar toast</button>
+
+
+  <div *ngIf="exibirConteudo">
+    <ion-list>
+      <ion-item *ngFor="let aluno of listaAlunos">
+
+        {{aluno.nome}}
+
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div>
+      <ion-list>
+        <ion-label>Selecionar Aluno</ion-label>
+          <ion-item>
+              <ion-select>
+                <ion-option *ngFor="let aluno of listaAlunos" >{{aluno.nome}}</ion-option>
+              </ion-select>
+          </ion-item>
+      </ion-list>
+  </div>
+</ion-content>
