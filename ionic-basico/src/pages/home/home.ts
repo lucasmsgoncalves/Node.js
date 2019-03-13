@@ -1,3 +1,4 @@
+import { ProfilePage } from '../profile/profile';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Messages } from '../../providers/messages';
@@ -10,6 +11,8 @@ import { Toast } from '../../providers/toast';
 export class HomePage {
   public exibirConteudo : boolean = true;
   public listaAlunos = [];
+  public user : any;
+  public password : any;
 
   constructor(public navCtrl: NavController, public messages : Messages, public toats : Toast) {
 
@@ -36,6 +39,18 @@ export class HomePage {
   }
 
   public showToast(){
-    this.toats.presentToast("Funcionou");
+    this.toats.presentToast("Login ou Senha incorretos!");
+  }
+
+  public login() {
+    debugger;
+    if (this.user === 'Lucas' && this.password === "121823") {
+      this.navCtrl.push(ProfilePage);
+    }
+    else { 
+      this.showToast()
+    }
+
+    
   }
 }

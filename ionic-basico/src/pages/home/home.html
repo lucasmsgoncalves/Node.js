@@ -3,12 +3,28 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>APP</ion-title>
+    <ion-title>LOGIN</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <button ion-button secondary (click)="buttonClick()">Mostrar</button>
+
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text" [(ngModel)]="user" ></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div padding>
+        <button ion-button primary (click)="login()">Sign In</button>
+    </div>
+  <!-- <button ion-button secondary (click)="buttonClick()">Mostrar</button>
   <button ion-button primary (click)="adicionarAlunos()">Carregar Alunos</button>
   <button ion-button light (click)="limparLista()">Limpar lista</button>
   <button ion-button light (click)="showMessage()">Mostrar mensagem</button>
@@ -34,5 +50,5 @@
               </ion-select>
           </ion-item>
       </ion-list>
-  </div>
+  </div> -->
 </ion-content>
