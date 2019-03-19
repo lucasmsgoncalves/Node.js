@@ -11,6 +11,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Messages } from '../providers/messages';
 import { Toast } from '../providers/toast';
+import { Login } from '../providers/login';
+import { HttpProvider } from '../providers/http';
 
 
 @NgModule({

@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Messages } from '../../providers/messages';
 import { Toast } from '../../providers/toast';
+import { Login } from '../../providers/login';
 
 @Component({
   selector: 'page-home',
@@ -14,7 +15,7 @@ export class HomePage {
   public user : any;
   public password : any;
 
-  constructor(public navCtrl: NavController, public messages : Messages, public toats : Toast) {
+  constructor(public navCtrl: NavController, public messages : Messages, public toats : Toast, public loginProvider : Login) {
 
   }
 
@@ -43,14 +44,14 @@ export class HomePage {
   }
 
   public login() {
-    debugger;
-    if (this.user === 'Lucas' && this.password === "121823") {
-      this.navCtrl.push(ProfilePage);
-    }
-    else { 
-      this.showToast()
-    }
+    // // debugger;
+    // if (this.user === 'Lucas' && this.password === "121823") {
+    //   this.navCtrl.push(ProfilePage);
+    // }
+    // else {
+    //   this.showToast()
+    // }
+    this.loginProvider.loginApi();
 
-    
   }
 }
