@@ -1,4 +1,4 @@
-import { Injectable, COMPILER_OPTIONS } from '@angular/core';
+import { Injectable } from '@angular/core';
 // import { LoadingController, Loading } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 

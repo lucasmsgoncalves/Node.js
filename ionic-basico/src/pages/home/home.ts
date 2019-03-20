@@ -44,7 +44,6 @@ export class HomePage {
   }
 
   public login() {
-    // debugger;
     if (this.user === 'admin@senai' && this.password === "1234") {
       
       this.loginProvider.loginApi(this.user, this.password).subscribe(

@@ -22,10 +22,10 @@ export class ProfilePage {
   }
 
   showTamanhos(){
-
+    // debugger;
     this.tamanhoProvider.getTamanhos().subscribe(
       (data : any) => {
-        this.listTamanhos = [data]
+        this.listTamanhos = data;
         console.log(this.listTamanhos);
       },
       (error : any) => {
