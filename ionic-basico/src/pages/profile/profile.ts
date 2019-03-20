@@ -1,3 +1,4 @@
+import { Tamanhos } from './../../providers/tamanhos';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -14,8 +15,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'profile.html',
 })
 export class ProfilePage {
+  listTamanhos = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public tamanhoProvider : Tamanhos) {
+    this.showTamanhos();
+  }
+
+  showTamanhos(){
+
+    this.tamanhoProvider.getTamanhos().subscribe(
+      (data : any) => {
+        this.listTamanhos = [data]
+        console.log(this.listTamanhos);
+      },
+      (error : any) => {
+        console.log(error);
+      }
+    )
   }
 
   ionViewDidLoad() {

@@ -6,10 +6,20 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>PERFIL</ion-title>
+    <ion-title>PEDIDO</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h1>SEJA BEM-VINDO!</h1>
+  <div>
+    <ion-list>
+      <ion-label>TAMANHO:</ion-label>
+        <ion-item>
+            <ion-select [(ngModel)]="listTamanhos">
+              <!-- <ion-option [(ngModel)]="listTamanhos"></ion-option> -->
+              <ion-option *ngFor="let tamanho of listTamanhos">{{tamanho.nome}}</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+</div>
 </ion-content>

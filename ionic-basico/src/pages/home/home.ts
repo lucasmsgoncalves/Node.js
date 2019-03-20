@@ -44,14 +44,21 @@ export class HomePage {
   }
 
   public login() {
-    // // debugger;
-    // if (this.user === 'Lucas' && this.password === "121823") {
-    //   this.navCtrl.push(ProfilePage);
-    // }
-    // else {
-    //   this.showToast()
-    // }
-    this.loginProvider.loginApi();
-
+    // debugger;
+    if (this.user === 'admin@senai' && this.password === "1234") {
+      
+      this.loginProvider.loginApi(this.user, this.password).subscribe(
+        (data : any) => {
+          console.log(data);
+          this.navCtrl.push(ProfilePage);
+        },
+        (error : any) => {
+          console.log(error);
+        }
+      )
+    }
+    else {
+      this.showToast()
+    }
   }
 }

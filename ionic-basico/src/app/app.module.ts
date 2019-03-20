@@ -1,3 +1,4 @@
+import { Tamanhos } from './../providers/tamanhos';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -13,7 +14,7 @@ import { Messages } from '../providers/messages';
 import { Toast } from '../providers/toast';
 import { Login } from '../providers/login';
 import { HttpProvider } from '../providers/http';
-
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HttpProvider } from '../providers/http';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -38,6 +40,10 @@ import { HttpProvider } from '../providers/http';
     SplashScreen,
     Messages,
     Toast,
+    Login,
+    HttpProvider,
+    HttpModule,
+    Tamanhos,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
