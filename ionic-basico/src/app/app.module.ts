@@ -15,6 +15,7 @@ import { Toast } from '../providers/toast';
 import { Login } from '../providers/login';
 import { HttpProvider } from '../providers/http';
 import { HttpModule } from '@angular/http';
+import { Sabores } from '../providers/sabores';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { HttpModule } from '@angular/http';
     HttpProvider,
     HttpModule,
     Tamanhos,
+    Sabores,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

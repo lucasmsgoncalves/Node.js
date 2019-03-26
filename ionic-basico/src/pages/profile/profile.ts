@@ -1,6 +1,7 @@
 import { Tamanhos } from './../../providers/tamanhos';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Sabores } from '../../providers/sabores';
 
 /**
  * Generated class for the ProfilePage page.
@@ -16,17 +17,33 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ProfilePage {
   listTamanhos = [];
+  listSabores = [];
+  id : any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public tamanhoProvider : Tamanhos) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public tamanhoProvider : Tamanhos, public saboresProvider : Sabores) {
     this.showTamanhos();
+    // this.showSabores();
   }
 
   showTamanhos(){
     // debugger;
     this.tamanhoProvider.getTamanhos().subscribe(
       (data : any) => {
+        this
         this.listTamanhos = data;
         console.log(this.listTamanhos);
+      },
+      (error : any) => {
+        console.log(error);
+      }
+    )
+  }
+
+  showSabores(){
+    this.saboresProvider.getSabores(this.id).subscribe(
+      (data : any) => {
+        this.listSabores = data;
+        console.log(this.listSabores);
       },
       (error : any) => {
         console.log(error);
