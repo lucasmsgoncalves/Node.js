@@ -2,7 +2,7 @@ import { Tamanhos } from './../../providers/tamanhos';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Sabores } from '../../providers/sabores';
-
+import { DeliveryPage } from '../delivery/delivery';
 /**
  * Generated class for the ProfilePage page.
  *
@@ -49,6 +49,10 @@ export class ProfilePage {
         console.log(error);
       }
     )
+  }
+
+  public acessDataDelivery(){
+    this.navCtrl.push(DeliveryPage);
   }
 
   ionViewDidLoad() {

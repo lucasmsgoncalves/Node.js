@@ -7,6 +7,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { ProfilePage } from '../pages/profile/profile';
+import { DeliveryPage } from '../pages/delivery/delivery';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,6 +17,8 @@ import { Login } from '../providers/login';
 import { HttpProvider } from '../providers/http';
 import { HttpModule } from '@angular/http';
 import { Sabores } from '../providers/sabores';
+import { Cidades } from '../providers/cidades';
+import { Bairros } from '../providers/bairros';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,7 @@ import { Sabores } from '../providers/sabores';
     HomePage,
     ListPage,
     ProfilePage,
+    DeliveryPage
   ],
   imports: [
     BrowserModule,
@@ -35,6 +39,7 @@ import { Sabores } from '../providers/sabores';
     HomePage,
     ListPage,
     ProfilePage,
+    DeliveryPage
   ],
   providers: [
     StatusBar,
@@ -46,6 +51,8 @@ import { Sabores } from '../providers/sabores';
     HttpModule,
     Tamanhos,
     Sabores,
+    Cidades,
+    Bairros,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

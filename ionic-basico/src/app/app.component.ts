@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { DeliveryPage } from '../pages/delivery/delivery';
+import { DELEGATE_CTOR } from '@angular/core/src/reflection/reflection_capabilities';
 
 @Component({
   templateUrl: 'app.html'
