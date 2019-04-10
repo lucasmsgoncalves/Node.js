@@ -13,7 +13,7 @@ export class Login{
       userName : userName,
       password : password
     }
-    this.http.url = "http://104.196.102.231/logon"
+    this.http.url = "http://localhost/logon"
     return this.http.post(object);
   }
 }

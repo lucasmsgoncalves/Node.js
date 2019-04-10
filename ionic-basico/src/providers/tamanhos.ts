@@ -13,7 +13,7 @@ export class Tamanhos{
     //   userName : userName,
     //   password : password
     // }
-    this.http.url = "http://104.196.102.231/tamanhos"
+    this.http.url = "http://localhost:3000/tamanhos"
     return this.http.get();
   } 
 }

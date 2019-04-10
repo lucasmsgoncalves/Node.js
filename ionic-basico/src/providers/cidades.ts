@@ -9,7 +9,7 @@ export class Cidades{
   }
 
   public getCidades(){
-    this.http.url = "http://104.196.102.231/cidades"
+    this.http.url = "http://localhost:3000/cidades"
     return this.http.get();
   }
 }
