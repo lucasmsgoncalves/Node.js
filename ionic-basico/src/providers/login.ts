@@ -13,7 +13,9 @@ export class Login{
       userName : userName,
       password : password
     }
-    this.http.url = "http://localhost/logon"
+    this.http.url = "http://localhost:3000/logon"
+    console.log(object);
+
     return this.http.post(object);
   }
 }

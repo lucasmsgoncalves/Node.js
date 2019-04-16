@@ -4,6 +4,7 @@ import { NavController } from 'ionic-angular';
 import { Messages } from '../../providers/messages';
 import { Toast } from '../../providers/toast';
 import { Login } from '../../providers/login';
+import { CreateAccountPage } from '../create-account/create-account';
 
 @Component({
   selector: 'page-home',
@@ -44,20 +45,23 @@ export class HomePage {
   }
 
   public login() {
-    if (this.user === 'admin@senai' && this.password === "1234") {
-      
-      this.loginProvider.loginApi(this.user, this.password).subscribe(
-        (data : any) => {
-          console.log(data);
+    this.loginProvider.loginApi(this.user, this.password).subscribe(
+      (data : any) => {
+        console.log(data);
+        if(data.success === true){
           this.navCtrl.push(ProfilePage);
-        },
-        (error : any) => {
-          console.log(error);
         }
-      )
-    }
-    else {
-      this.showToast()
-    }
+        else{
+          this.showToast();
+        }
+      },
+      (error : any) => {
+        console.log(error);
+      }
+    )
+  }
+
+  public accessCreateAccount(){
+    this.navCtrl.push(CreateAccountPage);
   }
 }

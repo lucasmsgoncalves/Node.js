@@ -9,7 +9,7 @@ export class Sabores{
   }
 
   public getSabores(id : any){
-    this.http.url = "http://104.196.102.231/sabores/" + id;
+    this.http.url = "http://localhost:3000/sabores/" + id;
     return this.http.get();
   }
 }

@@ -12,18 +12,21 @@
     <ion-list>
       <ion-item>
         <ion-label floating>Username</ion-label>
-        <ion-input type="text" [(ngModel)]="user" ></ion-input>
+        <ion-input value="luquinhas" type="text" [(ngModel)]="user" ></ion-input>
       </ion-item>
-    
+
       <ion-item>
         <ion-label floating>Password</ion-label>
-        <ion-input type="password" [(ngModel)]="password"></ion-input>
+        <ion-input value="1234" type="password" [(ngModel)]="password"></ion-input>
       </ion-item>
     </ion-list>
 
     <div padding>
-        <button ion-button primary (click)="login()">Sign In</button>
+        <button ion-button primary (click)="login()">Log In</button>
     </div>
+    <div padding>
+      <button class="button-create" ion-button light (click)="accessCreateAccount()">Create Account</button>
+  </div>
   <!-- <button ion-button secondary (click)="buttonClick()">Mostrar</button>
   <button ion-button primary (click)="adicionarAlunos()">Carregar Alunos</button>
   <button ion-button light (click)="limparLista()">Limpar lista</button>

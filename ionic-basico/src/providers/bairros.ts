@@ -9,7 +9,7 @@ export class Bairros{
   }
 
   public getBairros(id : any){
-    this.http.url = "http://104.196.102.231/bairros/" + id;
+    this.http.url = "http://localhost:3000/bairros/" + id;
     return this.http.get();
   }
 }

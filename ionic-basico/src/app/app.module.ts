@@ -8,6 +8,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { ProfilePage } from '../pages/profile/profile';
 import { DeliveryPage } from '../pages/delivery/delivery';
+import { CreateAccountPage } from '../pages/create-account/create-account';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,13 +21,15 @@ import { Sabores } from '../providers/sabores';
 import { Cidades } from '../providers/cidades';
 import { Bairros } from '../providers/bairros';
 
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
     ProfilePage,
-    DeliveryPage
+    DeliveryPage,
+    CreateAccountPage
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { Bairros } from '../providers/bairros';
     HomePage,
     ListPage,
     ProfilePage,
-    DeliveryPage
+    DeliveryPage,
+    CreateAccountPage
   ],
   providers: [
     StatusBar,

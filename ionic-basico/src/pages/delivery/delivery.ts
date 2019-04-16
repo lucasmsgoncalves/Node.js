@@ -43,6 +43,9 @@ export class DeliveryPage {
   }
 
   showBairros(){
+    if(this.id == "")
+      return
+
     this.bairrosProvider.getBairros(this.id).subscribe(
       (data : any) => {
         this.listBairros = data;
