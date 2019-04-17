@@ -1,14 +1,8 @@
+import { HomePage } from './../home/home';
+import { Create } from './../../providers/create';
+import { Toast } from './../../providers/toast';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { hostElement } from '@angular/core/src/render3/instructions';
-import { HomePage } from '../home/home';
-
-/**
- * Generated class for the CreateAccountPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -16,16 +10,37 @@ import { HomePage } from '../home/home';
   templateUrl: 'create-account.html',
 })
 export class CreateAccountPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public user : any;
+  public password : any;
+  
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toats : Toast, public createProvider : Create) {
   }
 
-  public accessLoginPage(){
-    this.navCtrl.push(HomePage);
+  public showToast(){
+    this.toats.presentToast("Cadastro inválido!");
+  }
+
+  public createUser() {
+    this.createProvider.createUserApi(this.user, this.password).subscribe(
+      (data : any) => {
+        console.log("createUser:",data);
+        this.navCtrl.push(HomePage);
+        // if(data.success === true)
+        // {
+        //   this.navCtrl.push(ProfilePage);
+        // }
+        // else{
+        //   this.showToast();
+        // }
+      },
+      (error : any) => {
+        console.log(error);
+        this.showToast();
+      }
+    )
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CreateAccountPage');
   }
-
 }

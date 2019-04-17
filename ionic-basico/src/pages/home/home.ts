@@ -13,8 +13,8 @@ import { CreateAccountPage } from '../create-account/create-account';
 export class HomePage {
   public exibirConteudo : boolean = true;
   public listaAlunos = [];
-  public user : any;
-  public password : any;
+  public user : any = null;
+  public password : any = null;
 
   constructor(public navCtrl: NavController, public messages : Messages, public toats : Toast, public loginProvider : Login) {
 
@@ -47,7 +47,7 @@ export class HomePage {
   public login() {
     this.loginProvider.loginApi(this.user, this.password).subscribe(
       (data : any) => {
-        console.log(data);
+        console.log("login:",data);
         if(data.success === true){
           this.navCtrl.push(ProfilePage);
         }

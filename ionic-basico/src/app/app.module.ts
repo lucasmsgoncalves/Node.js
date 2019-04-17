@@ -20,6 +20,7 @@ import { HttpModule } from '@angular/http';
 import { Sabores } from '../providers/sabores';
 import { Cidades } from '../providers/cidades';
 import { Bairros } from '../providers/bairros';
+import { Create } from './../providers/create';
 
 
 @NgModule({
@@ -57,6 +58,7 @@ import { Bairros } from '../providers/bairros';
     Sabores,
     Cidades,
     Bairros,
+    Create,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
