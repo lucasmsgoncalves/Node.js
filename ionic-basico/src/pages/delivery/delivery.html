@@ -28,7 +28,7 @@
         </ion-item>
         <ion-item class="value" *ngFor="let bairro of listBairros">{{bairro.name}}
           <ion-note class="note" item-end>
-            Taxa R${{bairro.value}}
+            Taxa R${{bairro.taxa}}
           </ion-note>
         </ion-item><br><br>
         <div *ngIf="showContent">

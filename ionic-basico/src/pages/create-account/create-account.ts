@@ -25,13 +25,6 @@ export class CreateAccountPage {
       (data : any) => {
         console.log("createUser:",data);
         this.navCtrl.push(HomePage);
-        // if(data.success === true)
-        // {
-        //   this.navCtrl.push(ProfilePage);
-        // }
-        // else{
-        //   this.showToast();
-        // }
       },
       (error : any) => {
         console.log(error);
