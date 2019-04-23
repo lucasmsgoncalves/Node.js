@@ -48,15 +48,11 @@ export class HomePage {
     this.loginProvider.loginApi(this.user, this.password).subscribe(
       (data : any) => {
         console.log("login:",data);
-        if(data.success === true){
           this.navCtrl.push(ProfilePage);
-        }
-        else{
-          this.showToast();
-        }
       },
       (error : any) => {
         console.log(error);
+        this.showToast();
       }
     )
   }

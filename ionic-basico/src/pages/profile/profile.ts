@@ -29,9 +29,8 @@ export class ProfilePage {
     // debugger;
     this.tamanhoProvider.getTamanhos().subscribe(
       (data : any) => {
-        this
         this.listTamanhos = data;
-        console.log(this.listTamanhos);
+        console.log("tamanhos:", this.listTamanhos);
       },
       (error : any) => {
         console.log(error);
@@ -43,7 +42,7 @@ export class ProfilePage {
     this.saboresProvider.getSabores(this.id).subscribe(
       (data : any) => {
         this.listSabores = data;
-        console.log(this.listSabores);
+        console.log("sabores",this.listSabores);
       },
       (error : any) => {
         console.log(error);
