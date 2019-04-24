@@ -1,5 +1,11 @@
 page-home {
   .button-create{
     background-color: forestgreen;
+    float: right;
+    cursor: pointer;
+  }
+
+  .button-login{
+    cursor: pointer;
   }
 }

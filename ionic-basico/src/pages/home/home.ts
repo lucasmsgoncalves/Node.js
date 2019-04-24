@@ -48,7 +48,7 @@ export class HomePage {
     this.loginProvider.loginApi(this.user, this.password).subscribe(
       (data : any) => {
         console.log("login:",data);
-          this.navCtrl.push(ProfilePage);
+          this.navCtrl.setRoot(ProfilePage);
       },
       (error : any) => {
         console.log(error);

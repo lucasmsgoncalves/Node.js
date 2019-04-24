@@ -12,22 +12,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class CreateAccountPage {
   public user : any;
   public password : any;
-  
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public toats : Toast, public createProvider : Create) {
   }
 
   public showToast(){
-    this.toats.presentToast("Cadastro inválido!");
+    this.toats.presentToast("Usuário cadastrado já existe!");
   }
 
   public createUser() {
     this.createProvider.createUserApi(this.user, this.password).subscribe(
       (data : any) => {
         console.log("createUser:",data);
-        this.navCtrl.push(HomePage);
+        this.navCtrl.setRoot(HomePage);
       },
       (error : any) => {
-        console.log(error);
+        console.log("deu merda",error);
         this.showToast();
       }
     )
