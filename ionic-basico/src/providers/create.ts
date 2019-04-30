@@ -14,7 +14,20 @@ export class Create{
       password : password
     }
     this.http.url = "http://localhost:3000/create"
-    console.log("json-create",object);
+    console.log("create-user",object);
+
+    return this.http.post(object);
+  }
+
+  public createSaborApi(idTamanho : any, sabor : any, preco : any){
+    const object = {
+      idTamanho : idTamanho,
+      sabor : sabor,
+      preco : preco
+    }
+
+    this.http.url = "http://localhost:3000/create_sabor"
+    console.log("create-sabor",object);
 
     return this.http.post(object);
   }

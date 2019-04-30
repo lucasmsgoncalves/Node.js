@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { DeliveryPage } from '../pages/delivery/delivery';
+import { CreateSaborPage } from '../pages/create-sabor/create-sabor';
 @Component({
   templateUrl: 'app.html'
 })

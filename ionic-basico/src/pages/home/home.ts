@@ -5,6 +5,7 @@ import { Messages } from '../../providers/messages';
 import { Toast } from '../../providers/toast';
 import { Login } from '../../providers/login';
 import { CreateAccountPage } from '../create-account/create-account';
+import { CreateSaborPage } from '../create-sabor/create-sabor';
 
 @Component({
   selector: 'page-home',
@@ -48,7 +49,7 @@ export class HomePage {
     this.loginProvider.loginApi(this.user, this.password).subscribe(
       (data : any) => {
         console.log("login:",data);
-          this.navCtrl.setRoot(ProfilePage);
+          this.navCtrl.setRoot(CreateSaborPage);
       },
       (error : any) => {
         console.log(error);

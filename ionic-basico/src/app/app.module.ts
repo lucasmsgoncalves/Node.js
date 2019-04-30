@@ -21,6 +21,8 @@ import { Sabores } from '../providers/sabores';
 import { Cidades } from '../providers/cidades';
 import { Bairros } from '../providers/bairros';
 import { Create } from './../providers/create';
+import { CreateSaborPage } from '../pages/create-sabor/create-sabor';
+
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import { Create } from './../providers/create';
     ListPage,
     ProfilePage,
     DeliveryPage,
-    CreateAccountPage
+    CreateAccountPage,
+    CreateSaborPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ import { Create } from './../providers/create';
     ListPage,
     ProfilePage,
     DeliveryPage,
-    CreateAccountPage
+    CreateAccountPage,
+    CreateSaborPage
   ],
   providers: [
     StatusBar,
